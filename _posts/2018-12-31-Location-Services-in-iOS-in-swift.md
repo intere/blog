@@ -205,4 +205,5 @@ func tappedButton(_ source: Any) {
 
 ## References
 - [Sample Code]({{ site.baseurl }}/images/2018-12-31/LocationServices.zip)
+- [GeoTrackKit](https://github.com/intere/GeoTrackKit)
 - [Requesting Always Authorization](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=swift)
