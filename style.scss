@@ -7,33 +7,35 @@
 
 @import "reset";
 @import "variables";
+@import "{{ site.theme }}";
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
 /**************/
 
-html {
-  font-size: 100%;
-}
+// html {
+//   font-size: 100%;
+// }
+//
+// body {
+// 	background: $white;
+//   font: 18px/1.4 $helvetica;
+//   color: $darkGray;
+// }
 
-body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
+// .container {
+//   margin: 0 auto;
+//   max-width: 740px;
+//   padding: 0 10px;
+//   width: 100%;
+// }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+  // font-family: $helveticaNeue;
+  // color: $darkerGray;
+  // font-weight: bold;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -46,9 +48,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
-  a {
-    color: inherit;
-  }
 }
 
 h2 {
@@ -61,22 +60,22 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  // color: $gray;
 }
 
 p {
   margin: 15px 0;
 }
-
-a {
-  color: $blue;
-  text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
-}
-
+//
+// a {
+//   color: $blue;
+//   text-decoration: none;
+// 	cursor: pointer;
+//   &:hover, &:active {
+//     color: $blue;
+//   }
+// }
+//
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
@@ -101,10 +100,10 @@ ul ul, ol ul {
 em, i {
   font-style: italic;
 }
-
-strong, b {
-  font-weight: bold;
-}
+//
+// strong, b {
+//   font-weight: bold;
+// }
 
 img {
   max-width: 100%;
@@ -225,14 +224,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
+    // color: $darkGray;
+    // text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      // color: $blue;
     }
   }
 }
@@ -285,5 +284,5 @@ footer {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
+// @import "highlights";
 @import "svg-icons";
