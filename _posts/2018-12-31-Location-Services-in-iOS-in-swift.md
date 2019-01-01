@@ -5,17 +5,27 @@ title: iOS Location Services in Swift
 
 Have you ever used Location Services in iOS?  Do you use them often enough to remember how to do it?  If you answered no to either of these questions and you're trying to use location services, then read on.
 
-### Strategy
+### Scope
+This is not meant to be a comprehensive guide to Location Services, but a "getting started" guide as a developer that is new to Location Services.  We'll also be looking at a single use case of location services: obtaining the highest quality location data (aka: highest battery consuming).  We'll be moving relatively quickly, but there is a [reference project]({{ site.baseurl }}/images/2018-12-31/LocationServices.zip) that you can download and try for yourself.
+
+`Note:` I maintain a library ([GeoTrackKit](https://github.com/intere/GeoTrackKit)) that does much of this already and adds a bunch of utilities on top of the location services, but there are still steps you need to take in your own application when integrating this library.
+
+## Strategy
 In principle, it's pretty easy, you do the following:
 1. Update your `Info.plist` file to enable location services
-    - `Note:` there are 3 possible keys that you can use 1, two or all of
+    - `Note:` there are 3 possible keys that you can use 1, two or all of them
 2. When appropriate, request permission to use location services
     - `Note:` there are 2 modes: `When in use` and `Always`, we'll talk about the difference later
 3. After the authorization callback notifies you that you have been granted access, configure the `LocationManager` and begin tracking.
 
-
-
 ## Code Walkthrough
+In this code walkthrough we're going to build a sample application that uses location services.  This application will have the following capabilities:
+- Request Access to Location Services
+- Open settings if access to Location Services were denied
+- If Access to Location Services is granted:
+    - Start tracking the user's location
+    - Display the location information on the screen (when tracking)
+    - Allows the user to stop tracking if they are currently tracking
 
 ### 1. Create a new project:
 ![_config.yml]({{ site.baseurl }}/images/2018-12-31/01_new_project.gif)
@@ -202,8 +212,18 @@ func tappedButton(_ source: Any) {
 ```
 ![_config.yml]({{ site.baseurl }}/images/2018-12-31/05_tracking.gif)
 
-
 ## References
+
+### Sample Code
 - [Sample Code]({{ site.baseurl }}/images/2018-12-31/LocationServices.zip)
+    - Written with swift 4.2 in Xcode 10.1
 - [GeoTrackKit](https://github.com/intere/GeoTrackKit)
+
+### Further reading
 - [Requesting Always Authorization](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=swift)
+- [Requesting When In Use Authorization](https://developer.apple.com/documentation/corelocation/cllocationmanager/1620562-requestwheninuseauthorization)
+- [Core Location](https://developer.apple.com/documentation/corelocation)
+
+### WWDC Videos
+- [2017 - What's New in Location Technologies](https://developer.apple.com/videos/play/wwdc2017/713/)
+- [2016 - Core Location Best Practices](https://developer.apple.com/videos/play/wwdc2016/716/)
