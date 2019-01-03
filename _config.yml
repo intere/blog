@@ -13,6 +13,14 @@ description: A technical blog about iOS development and related or other interes
 avatar: https://avatars0.githubusercontent.com/u/2284832?s=460&v=4
 # https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      comments: true
+
 #
 # Flags below are optional
 #
