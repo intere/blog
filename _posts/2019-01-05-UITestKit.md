@@ -31,7 +31,7 @@ Yes, but it's very lightweight.  Did I mention that it runs from an XCTest conta
 
 
 ## Example
-Here's a screenshot of a test suite running:
+Here's a screenshot of a test suite running (from the [UITestKit](https://github.com/intere/UITestKit) example project):
 
 ![Example Tests](https://user-images.githubusercontent.com/2284832/50541549-86a3e080-0b65-11e9-95d2-176b9ce3164b.gif)
 
@@ -110,3 +110,16 @@ Line 36 is a call that will optionally pause for a specific amount of time (this
     - In practice, the user shouldn't even be able to achieve this, becuase the button should be disabled.
 - Line 52: Assert that we still have the same number of rows as total number of shapes or fail and take a screenshot
 - Line 54: Optionally pause the UI (depending on the `shouldPauseUI` setting)
+
+### Running The Example
+1. Checkout the [UITestKit](https://github.com/intere/UITestKit) project
+    `git clone https://github.com/intere/UITestKit.git`
+2. Open the Example project
+    `open Example/UITestKit.xcworkspace`
+3. Run the tests in Xcode
+
+
+## More Examples
+- [MTG Cards: `feature/UITestKit-0.1.2-updates` branch](https://github.com/intere/mtg-cards/tree/feature/UITestKit-0.1.2-updates)
+    - [Smoke Tests (connected to real services)](https://github.com/intere/mtg-cards/blob/feature/UITestKit-0.1.2-updates/MTG%20CardsTests/UITests/AppUISmokeTest.swift)
+    - [Mock-based UI Tests](https://github.com/intere/mtg-cards/blob/feature/UITestKit-0.1.2-updates/MTG%20CardsTests/UITests/CardSearchUITest.swift)
