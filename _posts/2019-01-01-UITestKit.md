@@ -30,7 +30,7 @@ Yes, but it's very lightweight.  Did I mention that it runs from an XCTest conta
     - Keeping test code out of your production codebase
 
 
-## Examples
+## Example
 Here's a screenshot of a test suite running:
 
 ![Example Tests](https://user-images.githubusercontent.com/2284832/50541549-86a3e080-0b65-11e9-95d2-176b9ce3164b.gif)
