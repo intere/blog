@@ -14,8 +14,11 @@ This is not meant to be a comprehensive guide to Location Services, but a "getti
 In principle, it's pretty easy, you do the following:
 1. Update your `Info.plist` file to enable location services
     - `Note:` there are 3 possible keys that you can use 1, two or all of them
+        - `NSLocationWhenInUseUsageDescription` - The description for why you want to use location services for when the app is in use
+        - `NSLocationAlwaysUsageDescription` - The description for why you want to use location services "Always"
+        - `NSLocationAlwaysAndWhenInUseUsageDescription` - The description of why you want to use Location Services (for legacy iOS versions that don't support both a separate setting for `When In Use` and `Always`)
 2. When appropriate, request permission to use location services
-    - `Note:` there are 2 modes: `When in use` and `Always`, we'll talk about the difference later
+    - `Note:` there are 2 modes: `When in use` and `Always`
 3. After the authorization callback notifies you that you have been granted access, configure the `LocationManager` and begin tracking.
 
 ## Code Walkthrough
